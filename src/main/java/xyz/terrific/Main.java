@@ -13,8 +13,8 @@ import javax.swing.*;
 public class Main {
 
     public static String resources = "src/main/resources/";
-    public static String json_url = "https://anonfiles.com/167bOdl7y9/test_json";
-    public static String jar_url = "https://anonfiles.com/N37eO1l1y0/test_jar";
+    public static String json_url = "https://anonfiles.com/167bOdl7y9/test_json"; // Change to your Client Download URl
+    public static String jar_url = "https://anonfiles.com/N37eO1l1y0/test_jar"; // Change to your Client Download URl
 
     public static InstallerFrame frame;
 
