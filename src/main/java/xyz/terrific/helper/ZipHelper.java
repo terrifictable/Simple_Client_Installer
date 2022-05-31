@@ -4,6 +4,8 @@ import java.io.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
+// This isn't used atm
+
 /**
  * This utility extracts files and directories of a standard zip file to
  * a destination directory.
