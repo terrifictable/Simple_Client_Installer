@@ -6,6 +6,9 @@ import com.formdev.flatlaf.util.LoggingFacade;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * @author FlatLaf
+ */
 public class ThemeUtils {
     /**
      * To install Themes
