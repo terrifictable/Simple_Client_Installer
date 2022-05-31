@@ -231,14 +231,13 @@ public class InstallerFrame extends JFrame {
         scrollPane1.setBounds(25, 60, 850, 305);
 
         //======== installed_table ========
-        {
-            scrollPane1.addMouseListener(new MouseAdapter() {
-                @Override
-                public void mouseClicked(MouseEvent e) {
-                    installed_table_MouseClicked(e);
-                }
-            });
-        }
+        installed_table.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                installed_table_MouseClicked(e);
+            }
+        });
+
 
         //---- error ----
         error.setEnabled(false);
