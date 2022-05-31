@@ -2,6 +2,9 @@ package xyz.terrific.utils.jframe;
 
 import javax.swing.table.AbstractTableModel;
 
+/**
+ * @author TerrificTable55
+ */
 public class TableModel extends AbstractTableModel {
 
     @Override
