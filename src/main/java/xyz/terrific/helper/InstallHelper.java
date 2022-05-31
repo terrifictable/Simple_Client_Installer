@@ -10,6 +10,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author TerrificTable55
+ */
 public class InstallHelper {
 
     public static String client_name = "test";
