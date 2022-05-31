@@ -4,7 +4,7 @@ import java.io.File;
 
 /**
  * @author Eric Golde
- * This helps with some file path's
+ * This helps with some file / minecraft path's
  */
 public enum OSHelper {
     WINDOWS("AppData" + File.separator + "Roaming" + File.separator + ".minecraft"),
