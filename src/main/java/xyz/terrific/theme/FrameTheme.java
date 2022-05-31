@@ -3,8 +3,6 @@ package xyz.terrific.theme;
 import com.formdev.flatlaf.IntelliJTheme;
 import xyz.terrific.utils.ThemeUtils;
 
-// Based on XCode-Dark
-
 /**
  * @author TerrificTable55
  * Based on `XCode-Dark` FlatLaf theme
