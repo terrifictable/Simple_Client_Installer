@@ -1,6 +1,8 @@
 package xyz.terrific.utils;
 
-
+/**
+ * @author TerrificTable55
+ */
 public class Logger {
     private String ap = "Unknown";
 
