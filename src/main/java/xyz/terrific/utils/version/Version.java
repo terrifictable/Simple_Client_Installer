@@ -1,5 +1,8 @@
 package xyz.terrific.utils.version;
 
+/**
+ * @author TerrificTable55
+ */
 public class Version {
     private String name;
     private boolean installed;
