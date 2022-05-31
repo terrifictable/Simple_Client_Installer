@@ -1,0 +1,102 @@
+JFDML JFormDesigner: "7.0.5.4.420" Java: "11.0.14.1" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundleName": "InstallerFrame"
+	"i18n.keyPrefix": "InstallerFrame"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"minimumSize": new java.awt.Dimension( 900, 550 )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "window_label"
+				"text": new FormMessage( null, "InstallerFrame.window_label.text" )
+				"autoscrolls": true
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 20, false )
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 900
+				"height": 60
+				"x": 0
+				"y": 0
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn_install"
+				"text": new FormMessage( null, "InstallerFrame.btn_install.text" )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "btn_installMouseClicked", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 135
+				"height": 40
+				"x": 380
+				"y": 450
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn_uninstall"
+				"text": new FormMessage( null, "InstallerFrame.btn_uninstall.text" )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "btn_uninstallMouseClicked", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 135
+				"height": 40
+				"x": 210
+				"y": 450
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn_refresh"
+				"text": new FormMessage( null, "InstallerFrame.btn_refresh.text" )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "btn_refreshMouseClicked", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 70
+				"height": 30
+				"x": 805
+				"y": 455
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "scrollPane1MouseClicked", true ) )
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "installed_table"
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 25
+				"y": 60
+				"height": 305
+				"width": 850
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "error"
+				"enabled": false
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 3, false )
+				"horizontalAlignment": 0
+				"foreground": &ColorUIResource0 new javax.swing.plaf.ColorUIResource( 238, 238, 238 )
+				"background": #ColorUIResource0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 0
+				"y": 380
+				"width": 900
+				"height": 30
+			} )
+			add( new FormComponent( "javax.swing.JProgressBar" ) {
+				name: "progress_bar"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 235
+				"y": 420
+				"width": 430
+				"height": 20
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btn_exit"
+				"text": new FormMessage( null, "InstallerFrame.btn_exit.text" )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "btn_exitMouseClicked", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 565
+				"y": 450
+				"width": 100
+				"height": 40
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 900, 550 )
+		} )
+	}
+}
