@@ -46,7 +46,7 @@ public class InstallHelper {
     }
 
     /**
-     * Install Client
+     * Install & Download Client
      * @param version to create folder and save files in that folder
      * @return boolean (true = success | false = failed)
      */
