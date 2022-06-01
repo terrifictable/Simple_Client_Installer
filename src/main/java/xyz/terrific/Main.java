@@ -13,8 +13,8 @@ import javax.swing.*;
 public class Main {
 
     public static String resources = "src/main/resources/";
-    public static String json_url = "https://cdn-123.anonfiles.com/167bOdl7y9/5c886926-1654113233/test.json"; // Change to your Client Download URl
-    public static String jar_url = "https://cdn-141.anonfiles.com/N37eO1l1y0/01cd8096-1654113243/test.jar"; // Change to your Client Download URl
+    public static String json_url = "https://raw.githubusercontent.com/TerrificTable/Simple_Client_Installer/master/libraries/client/test.json"; // Change to your Client Download URl
+    public static String jar_url = "https://raw.githubusercontent.com/TerrificTable/Simple_Client_Installer/master/libraries/client/test.jar"; // Change to your Client Download URl
 
     public static InstallerFrame frame;
 
