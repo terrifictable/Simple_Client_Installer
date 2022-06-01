@@ -5,6 +5,8 @@
 package xyz.terrific.gui;
 
 import javax.swing.plaf.*;
+
+import xyz.terrific.Main;
 import xyz.terrific.helper.InstallHelper;
 import xyz.terrific.utils.version.Version;
 
@@ -27,6 +29,7 @@ public class InstallerFrame extends JFrame {
     }
 
     private void btn_installMouseClicked(MouseEvent e) {
+        if (!btn_install.isEnabled()) return;
         error.setText("");
 
         int version_index = this.installed_table.getSelectedRow();
@@ -52,11 +55,17 @@ public class InstallerFrame extends JFrame {
         }).start();
 
         boolean success = InstallHelper.install(version);
+
+        new Thread(() -> {
+            if (success)
+                Main.frame.progress_bar.setValue(100);
+        }).start();
+
         if (!success) error.setText("Unable to install Client!");
         new Thread(() -> {
             try {
                 while (true) {
-                    if (progress_bar.getValue() >= 100) {
+                    if (progress_bar.getValue() >= 100 && success) {
                         Thread.sleep(2000);
                         progress_bar.setVisible(false);
                         break;
@@ -71,6 +80,7 @@ public class InstallerFrame extends JFrame {
     }
 
     private void btn_uninstallMouseClicked(MouseEvent e) {
+        if (!btn_uninstall.isEnabled()) return;
         error.setText("");
 
         int version_index = this.installed_table.getSelectedRow();
@@ -88,7 +98,7 @@ public class InstallerFrame extends JFrame {
 
                 progress_bar.setValue(i);
                 try {
-                    Thread.sleep((long) (100 + (Math.random() * (10 - 5 + 1))));
+                    Thread.sleep((long) (100 + (Math.random() * (5 - 1 + 1))));
                 } catch (InterruptedException ex) {
                     System.out.println("[ERROR] SLEEP:  " + ex.getMessage());
                 }
