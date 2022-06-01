@@ -10,7 +10,7 @@ and [Maven](https://maven.apache.org/)
 ## Screenshot
 ![screenshot.png](images/screenshot.png)
 
-Oh yea, I made a ["custom"](https://github.com/TerrificTable/Simple_Client_Installer/blob/master/src/main/java/xyz/terrific/theme/FrameTheme.java) JFrame Theme, it's based of XCode-Dark, i changed some colors 
+Oh yea, I made a ["custom"](https://github.com/TerrificTable/Simple_Client_Installer/blob/master/src/main/java/xyz/terrific/theme/FrameTheme.java) JFrame Theme, it's based of off XCode-Dark, i changed some colors 
 <br><br>
 
 ### FlatLaf:<br>
