@@ -7,8 +7,11 @@ import xyz.terrific.utils.version.Version;
 
 import java.io.File;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author TerrificTable55
@@ -66,7 +69,6 @@ public class InstallHelper {
             System.out.println("[ERROR]  " + e.getMessage());
             return false;
         }
-        Main.frame.progress_bar.setValue(100);
 
         return true;
     }
@@ -77,13 +79,19 @@ public class InstallHelper {
      * @return boolean (true = success | false = failed)
      */
     public static boolean uninstall(Version version) {
-        if (version.isInstalled()) return false;
+        if (!version.isInstalled()) return false;
 
         try {
 
             File path = new File(OSHelper.getOS().getMc() + "versions/" + client_name);
+
             if (!path.exists()) return false;
-            if (!path.delete()) return false;
+
+            for (File file : Objects.requireNonNull(path.listFiles()))
+                file.delete();
+
+            path.delete();
+            if (path.exists()) return false;
 
             version.setInstalled(false);
 
