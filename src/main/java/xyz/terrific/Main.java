@@ -28,7 +28,6 @@ public class Main {
         frame = new InstallerFrame();
         frame.setIconImage(new ImageIcon(resources + "images/icon.png").getImage());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.btn_refresh.setVisible(false);
         frame.setTitle("Client Installer");
 
         // Theme Based on XCode-Dark

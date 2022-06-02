@@ -123,10 +123,6 @@ public class InstallerFrame extends JFrame {
         }).start();
     }
 
-    private void btn_refreshMouseClicked(MouseEvent e) {
-        // TODO REFRESH BUTTON
-    }
-
     private void installed_table_MouseClicked(MouseEvent e) {
         for (Version version : InstallHelper.getInstalled()) {
             if (Objects.equals(version.getName(), InstallHelper.getInstalled().get(installed_table.getSelectedRow()).getName())) {
@@ -166,9 +162,6 @@ public class InstallerFrame extends JFrame {
 
         btn_uninstall = new JButton();
         btn_uninstall.putClientProperty("JButton.buttonType", "roundRect");
-
-        btn_refresh = new JButton();
-        btn_refresh.putClientProperty("JButton.buttonType", "roundRect");
 
 
         scrollPane1 = new JScrollPane();
@@ -221,17 +214,6 @@ public class InstallerFrame extends JFrame {
         });
         contentPane.add(btn_uninstall);
         btn_uninstall.setBounds(210, 450, 135, 40);
-
-        //---- btn_refresh ----
-        btn_refresh.setText(bundle.getString("InstallerFrame.btn_refresh.text"));
-        btn_refresh.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                btn_refreshMouseClicked(e);
-            }
-        });
-        contentPane.add(btn_refresh);
-        btn_refresh.setBounds(805, 455, 70, 30);
 
         //======== scrollPane1 ========
         {
@@ -294,7 +276,6 @@ public class InstallerFrame extends JFrame {
     public JLabel window_label;
     public JButton btn_install;
     public JButton btn_uninstall;
-    public JButton btn_refresh;
     public JScrollPane scrollPane1;
     public JTable installed_table;
     public JLabel error;
